@@ -1,6 +1,12 @@
 # Security
 
-- Never commit real secrets, tokens, private keys, database URLs, bot tokens, chat IDs, or production service URLs.
-- Configure required environment variables locally using `.env` or a managed secret store.
-- If a credential was ever committed, rotate it before making the repository public.
-- Report security issues privately to the repository maintainer.
+## Public-Safe Rules
+
+- Never commit secrets, tokens, passwords, private keys, database URLs, bot tokens, chat IDs, or other credentials.
+- Use environment variables or the hosting provider's secret manager for real deployments.
+- Do not commit production URLs, tokens, private keys, bot tokens, chat IDs, personal schedules, or private workflows.
+- Rotate any credential that was ever committed.
+
+## Reporting
+
+Report security issues privately to the repository maintainer.
