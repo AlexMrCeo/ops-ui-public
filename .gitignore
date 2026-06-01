@@ -8,8 +8,9 @@
 *.crt
 *.csr
 *.jks
-service-account.json
-credentials.json
+
+service-account*.json
+credentials*.json
 secrets.*
 *.secret
 
