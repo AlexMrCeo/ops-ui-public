@@ -1,23 +1,36 @@
 # Ops UI
 
-Ops UI is a public template for a lightweight operations dashboard. It is intended to help teams collect operational signals, review alerts, and coordinate follow-up actions without exposing private infrastructure details.
+This repository is a public-safe template/reference for an AI-native operations interface.
 
-This repository contains public-safe documentation and configuration examples only. Real deployment URLs, service identifiers, credentials, private schedules, and internal workflows must be configured outside git.
+It provides generic documentation and configuration examples for an operations UI without exposing private infrastructure, production endpoints, real credentials, personal schedules, private workflows, or internal service identifiers.
 
-## What This Project Covers
+## What This Is
 
-- Dashboard and API concepts for operational visibility
-- Environment variable examples with placeholders
-- Security guidance for keeping private deployments safe
-- High-level architecture notes that can be adapted to a private system
+- A public-safe reference for an operations interface.
+- A concise starting point for dashboards, operational signals, and coordination surfaces.
+- A template that private deployments can adapt with their own application code, services, and secrets.
 
-## Configuration
+## What This Is Not
 
-Copy `.env.example` to `.env` locally and replace placeholder values with your own credentials.
+- It is not a production deployment.
+- It does not include real credentials, production endpoints, private schedules, private workflows, or personal data.
+- It does not define a complete application stack. Use the package manager configured by your application.
 
-Never commit `.env` files or real secrets.
+## Quick Start
 
-## Required Environment Variables
+```bash
+git clone https://github.com/AlexMrCeo/ops-ui-public.git
+cd ops-ui-public
+cp .env.example .env.local
+npm install
+npm run dev
+```
+
+If the actual package manager differs, use the one configured by the application.
+
+## Environment Variables
+
+Copy `.env.example` to a local env file and replace placeholders with values for your own deployment:
 
 - `SUPABASE_URL`
 - `SUPABASE_ANON_KEY`
@@ -25,8 +38,40 @@ Never commit `.env` files or real secrets.
 - `OPS_API_URL`
 - `OPS_API_TOKEN`
 
-See `.env.example` for placeholder values.
+Real deployments should configure secrets via environment variables or the hosting provider's secret manager.
 
-## Security
+## Security / Public-Safe Boundaries
 
-Read [SECURITY.md](SECURITY.md) before deploying or connecting this project to real services.
+This repository must not include:
+
+- Production endpoints
+- Real credentials or tokens
+- Private keys
+- Bot tokens or chat IDs
+- Personal schedules
+- Private workflows
+- Internal service identifiers
+- Private architecture details
+- Personal data
+
+Any real credential that was ever committed should be rotated.
+
+## Repository Structure
+
+```text
+.
+├── .env.example
+├── .github/workflows/secret-scan.yml
+├── AGENTS.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── OPS-ARCHITECTURE.md
+├── OPS-SYSTEM.md
+├── OPS-VISION.md
+├── README.md
+└── SECURITY.md
+```
+
+## License
+
+MIT. See [LICENSE](LICENSE).
