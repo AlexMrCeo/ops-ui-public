@@ -1,20 +1,12 @@
 # Ops UI
 
-This repository is a public-safe template/reference for an AI-native operations interface.
+## Overview
 
-It provides generic documentation and configuration examples for an operations UI without exposing private infrastructure, production endpoints, real credentials, personal schedules, private workflows, or internal service identifiers.
+Ops UI is an AI-native operations interface for turning scattered signals, tasks, automations, and system context into one clear command surface.
 
-## What This Is
+It is designed as a lightweight foundation for internal dashboards, agent control panels, operational workflows, and coordination tools around real products or teams.
 
-- A public-safe reference for an operations interface.
-- A concise starting point for dashboards, operational signals, and coordination surfaces.
-- A template that private deployments can adapt with their own application code, services, and secrets.
-
-## What This Is Not
-
-- It is not a production deployment.
-- It does not include real credentials, production endpoints, private schedules, private workflows, or personal data.
-- It does not define a complete application stack. Use the package manager configured by your application.
+The public repository focuses on the interface model, architecture, and integration boundaries. Production deployments can connect their own APIs, databases, agents, automations, and infrastructure through environment variables and external secret management.
 
 ## Quick Start
 
