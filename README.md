@@ -1,12 +1,18 @@
 # Ops UI
 
-## Overview
-
 Ops UI is an AI-native operations interface for turning scattered signals, tasks, automations, and system context into one clear command surface.
 
 It is designed as a lightweight foundation for internal dashboards, agent control panels, operational workflows, and coordination tools around real products or teams.
 
 The public repository focuses on the interface model, architecture, and integration boundaries. Production deployments can connect their own APIs, databases, agents, automations, and infrastructure through environment variables and external secret management.
+
+## Core Ideas
+
+- One command surface for operational context
+- Clear separation between public interface patterns and private deployment details
+- Environment-driven integrations
+- Safe defaults for sharing architecture without exposing infrastructure
+- Agent-friendly documentation and operating boundaries
 
 ## Quick Start
 
@@ -32,21 +38,9 @@ Copy `.env.example` to a local env file and replace placeholders with values for
 
 Real deployments should configure secrets via environment variables or the hosting provider's secret manager.
 
-## Security / Public-Safe Boundaries
+## Security
 
-This repository must not include:
-
-- Production endpoints
-- Real credentials or tokens
-- Private keys
-- Bot tokens or chat IDs
-- Personal schedules
-- Private workflows
-- Internal service identifiers
-- Private architecture details
-- Personal data
-
-Any real credential that was ever committed should be rotated.
+Security rules and reporting guidance live in [SECURITY.md](SECURITY.md).
 
 ## Repository Structure
 
